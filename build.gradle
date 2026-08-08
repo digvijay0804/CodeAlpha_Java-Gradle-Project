@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'com.example'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+}
+
+application {
+    mainClass = 'App'
+}
+
+jar {
+    manifest {
+        attributes(
+            'Main-Class': 'App'
+        )
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
